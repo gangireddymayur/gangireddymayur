@@ -16,13 +16,14 @@ I build products end to end: native mobile apps, web dashboards, the APIs behind
 - **Languages:** Python · TypeScript · JavaScript · Java · Kotlin · SQL · Dart
 - **Mobile:** Android (Java, Kotlin, Jetpack Compose, Android TV) · Capacitor · Flutter · iOS WidgetKit
 - **Web & backend:** React · TanStack Start · Node.js · Express · FastAPI · PostgreSQL · MySQL · SQLite · DuckDB
-- **AI / ML:** PyTorch · ONNX Runtime (on-device inference) · XGBoost · YOLOv8 · OpenCV · MediaPipe · LLM agents · MCP
+- **AI / ML:** PyTorch · ONNX Runtime (on-device inference) · XGBoost · YOLOv8 · OpenCV · MediaPipe · RAG & embeddings · LLM evaluation · LLM agents · MCP
 
 ## Open-source projects
 
 | Project | What it is |
 |---|---|
-| [**LeafLens**](https://github.com/gangireddymayur/leaflens) | **New.** On-device plant disease detection for iOS and Android. Trained in PyTorch, exported to ONNX, runs offline in the app. 99.8% test accuracy on PlantVillage lab photos (real-field accuracy still to be measured) |
+| [**LeafLens**](https://github.com/gangireddymayur/leaflens) | On-device plant disease detection for iOS and Android. Trained in PyTorch, exported to ONNX, runs offline in the app. The lab-trained model scored 99.8% on lab photos but 27% on real photos, so I retrained on mixed data: **69% top-1 (90% top-3) on held-out real-world photos** |
+| [**Plant Health RAG**](https://github.com/gangireddymayur/plant-health-rag) | Cited question answering over 141 Wikipedia articles on Indian and US crop diseases and pests, fully local (embeddings, Chroma, Ollama), with a chat interface. It refuses when the articles don't contain the answer. On my 153-question test set: right passage in the top 5 for 94%, 92% correct answers, 1 of 29 unanswerable questions answered, every failure documented |
 | [HoloKinetic Gesture Lab](https://github.com/gangireddymayur/holokinetic-gesture-lab) | Control a 3D physics scene and a video timeline with your hands in the browser (MediaPipe Hands, Three.js) |
 | [Samarth](https://github.com/gangireddymayur/Samarth-theChatBot) | Rule-based natural-language-to-SQL Q&A over government rainfall and crop data (FastAPI, DuckDB) |
 | [Ship Detection (YOLOv8)](https://github.com/gangireddymayur/Ship_Detection_YOLOv8) | YOLOv8 ship detector for aerial imagery with a [live Streamlit demo](https://shipdetectionyolov8.streamlit.app/) |
